@@ -1,0 +1,33 @@
+integer all = ALL_SIDES;
+default
+{
+    state_entry()
+    {
+        llSetText("Click to Start", <0.5, 0.0, 1.0>, 0.9);
+        llSetColor(<0.5, 0.0, 1.0>, all);
+        llSetAlpha(1.0, all);
+    }
+    touch_start (integer num)
+    {
+        llSetText("Script running...", <1.0, 1.0, 1.0>, 1.0);
+        llSetColor(<1.0, 0.0, 0.0>, 0);
+        llSleep(1.0);
+        llSetColor(<0.0, 1.0, 0.0>, 1);
+        llSleep(1.0);
+        llSetColor(<0.0, 0.0, 1.0>, 2);
+        llSleep(1.0);
+        llSetColor(<1.0, 1.0, 0.0>, 3);
+        llSleep(1.0);
+        llSetColor(<1.0, 0.0, 1.0>, 4);
+        llSleep(1.0);
+        llSetColor(<0.0, 1.0, 1.0>, 5);
+        llSleep(1.0);
+        llSetAlpha(0.5, all);
+        llSleep(1.0);
+        llSetAlpha(0.0, all);
+        llSleep(1.0);
+        llOwnerSay("Script Complete");
+        llSleep(1.0);
+        llResetScript();
+    }
+}
